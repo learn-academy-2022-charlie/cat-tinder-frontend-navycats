@@ -11,7 +11,9 @@ class Footer extends Component{
         return(
             <div>
             <h1 style={mystyle}>Footer</h1>
-            <p>Welcome to the Jungle</p>
+            <p>
+                <h3>Welcome to the Jungle</h3>
+           </p>
             </div>
             
         )
