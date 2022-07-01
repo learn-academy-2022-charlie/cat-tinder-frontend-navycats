@@ -10,7 +10,7 @@ class NotFound extends Component {
     };
     return(
         <div>
-        <h1 style={mystyle}>YourLost</h1>
+        <h1 style={mystyle}>You're Lost!</h1>
         <p>Welcome to the Jungle</p>
         </div>
         
