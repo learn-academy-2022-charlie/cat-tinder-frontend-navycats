@@ -13,14 +13,17 @@ import Home from './Home.js'
 //Allows us to utilize the adapter we import in earlier, allowing us to call and render a component.
 Enzyme.configure({adapter: new Adapter() })
 
-describe("When Home renders", ()=>{
-    let homerRender
+  describe("When Home renders to the user", ()=>{
+    let homeRender
     beforeEach(() => {
         homeRender = shallow(<Home />)
     })
     it("displays a header", ()=>{
-        const homeImageRender = homeRender.find("img")
-        expect(homeImageRender.length).toEqual(1)
-        
-    }) 
-})
+        const homeHeader = homeRender.find("h1")
+        expect(homeHeader.length).toEqual(1)
+    })
+    it ("it displays a text", ()=>{
+        const homeSpace = homeRender.find("h1")
+        expect(homeSpace.text()).toEqual("You're Lost!")
+    })
+  })
