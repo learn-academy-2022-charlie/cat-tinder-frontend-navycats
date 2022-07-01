@@ -10,15 +10,16 @@ describe("When App.js renders to the user", () => {
     beforeEach(()=>{
       appRender= shallow(<App />)
     })
-  it("it displays a header and a footer", () => {
-    
+  it("it displays a header", () => {
+   const appRender = shallow(<App />) 
     const appHeaderRender = appRender.find("Header")
     expect(appHeaderRender.length).toEqual(1)
   })
-})
-it("it displays a footer", () => {
-  const appFooterRender = appRender.find("Footer")
-  expect(appFooterRender.length).toEqual(1)
-})
+  })
+  it("it displays a footer", () => {
+    const appRender = shallow(<App />) 
+    const appFooterRender = appRender.find("Footer")
+    expect(appFooterRender.length).toEqual(1)
+  })
 
  

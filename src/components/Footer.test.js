@@ -21,5 +21,6 @@ describe("When Footer renders", ()=>{
     it("displays 'Footer', () => {
         const footerRender = footerRender.find("h3") 
         expect(footerRender.length).toEqual(3)
-    }) 
-// })
+        )
+        }) 
+    }
