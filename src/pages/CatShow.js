@@ -25,14 +25,18 @@ class CatShow extends Component {
         <img src={this.props.cat.image} alt="adorable cat" />
         <CardText>I am {this.props.cat.age} years old. I enjoy  {this.props.cat.enjoys}.</CardText>
              <NavLink to={`/catshow/${cat.id}`}>
-                {cat.name}
+             <Button> More Info </Button> 
              </NavLink>
         </Card>
       </Col>
       <h3>One Cat</h3>
+            <CardTitle tag= "h1">Hey! My name is {cat.name}</CardTitle>
+            <img src={cat.image} alt="cat" />
+        <CardText>I am {cat.age} years old. I enjoy {cat.enjoys}.</CardText>
       </>
     )
   }
   
 }
 export default CatShow
+

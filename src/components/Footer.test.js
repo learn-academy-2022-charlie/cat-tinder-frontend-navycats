@@ -18,9 +18,9 @@ describe("When Footer renders", ()=>{
     beforeEach(() => {
         footerRender = shallow(<Footer />)
     })
-    it("displays 'Footer', () => {
-        const footerRender = footerRender.find("h3") 
-        expect(footerRender.length).toEqual(3)
-        )
+    it("displays Footer", () => {
+        const footerHeaderRender = footerRender.find("h3") 
+        expect(footerHeaderRender.length).toEqual(1)
+        
         }) 
-    }
+    })
