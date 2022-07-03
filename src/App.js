@@ -7,44 +7,50 @@ import CatShow from './pages/CatShow'
 import CatNew from './pages/CatNew'
 import CatEdit from './pages/CatEdit'
 import NotFound from './pages/NotFound'
+import mockCats from './mockCats.js'
+import './App.css'
 import {
   BrowserRouter as Router, 
   Route,
   Switch
 } from 'react-router-dom'
-import mockCats from './mockCats.js'
+import { NavLink } from 'react-router-dom'
 
-class App extends Component {
+export default class App extends Component {
   constructor(props){
     super(props)
     this.state = {
       cats: mockCats
     }
   }
-render(){
-  console.log(this.state.cats)  
+    createCat = (cat) => {
+      console.log(cat)
+    }
+render() {
 return(
-    
+
   <Router>
         <Header/>
-        <h1>Welcome to ThunderCats -- App.js</h1>
+        <h1>Welcome to TinderCats!!</h1>
+
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/catindex" render={(props) => <CatIndex cats={this.state.cats} />} /> 
+          <Route path="/catindex" render={() => <CatIndex cats={this.state.cats} />} /> 
           <Route path="/catshow/:id" render={(props) => {
             let id = props.match.params.id
             let cat = this.state.cats.find(cat => cat.id === +id)
             return <CatShow cat={cat} />
-          }} /> component={CatShow} />
+          }} />
 
-          <Route path="/catnew" component={CatNew} />
+          <Route path="/catnew" 
+          render={(props) => <CatNew createCat={this.createCat} />}
+          />
           <Route path="/catedit" component={CatEdit} />
-          <Route component={NotFound} />
+          <Route component={NotFound}/>
         </Switch>
         <Footer/>
       </Router>
       
-)    
-}
-}
-export default App
+       )    
+      }
+    }

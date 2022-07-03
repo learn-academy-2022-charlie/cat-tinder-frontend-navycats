@@ -12,7 +12,7 @@ class Header extends Component{
             <div>
             <h1 style={mystyle}>Header</h1>
             <p>
-                <h3>Welcome to the Jungle</h3>
+                <h3></h3>
             </p>
             </div>
             
