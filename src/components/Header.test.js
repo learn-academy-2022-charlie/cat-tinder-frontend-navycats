@@ -20,6 +20,7 @@ describe("When Header renders", ()=>{
     })
     it("displays a header", () => {
         const headerTestRender = headerRender.find("h1")
-     expect(headerRender.text()).toEqual("Header")
+     expect(headerRender.text()).toEqual(" Welcome to TinderCats!!"
+     )
     }) 
 })

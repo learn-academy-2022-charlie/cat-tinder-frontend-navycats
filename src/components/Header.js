@@ -10,7 +10,7 @@ class Header extends Component{
         };
         return(
             <div>
-            <h1 style={mystyle}>Header</h1>
+            <h1 style={mystyle}> Welcome to TinderCats!!</h1>
             <p>
                 <h3></h3>
             </p>
