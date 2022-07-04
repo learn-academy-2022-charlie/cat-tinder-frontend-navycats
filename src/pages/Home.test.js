@@ -24,6 +24,6 @@ Enzyme.configure({adapter: new Adapter() })
     })
     it ("it displays a text", ()=>{
         const homeSpace = homeRender.find("h1")
-        expect(homeSpace.text()).toEqual("You're Lost!")
+        expect(homeSpace.text()).toEqual("")
     })
   })

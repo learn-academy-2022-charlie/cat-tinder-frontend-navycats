@@ -31,7 +31,13 @@ return(
 
   <Router>
         <Header/>
-        <h1>Welcome to TinderCats!!</h1>
+        <h1>
+          <br/>
+          <br/>
+          <br/>
+          
+
+        </h1>
 
         <Switch>
           <Route exact path="/" component={Home} />
